@@ -3,17 +3,6 @@
 
 using namespace std;
 
-/*
-´ÙÇü¼º
- - ¿©·¯°³ÀÇ ÀÚ½ÄÅ¬·¡½º °´Ã¼¸¦ ÇÏ³ªÀÇ ºÎ¸ğÅ¬·¡½ºÀÇ Æ÷ÀÎÅÍ·Î ÄÁÆ®·ÑÇÏ´Â °Í
-
- ¼ø¼ö °¡»ó ÇÔ¼ö
- - ¸Ş¼ÒµåÀÇ ±â´ÉÀ» Á¤ÀÇÇÏÁö ¾ÊÀº °¡»ó ÇÔ¼ö
- - ¹İµå½Ã »ó¼ÓÀ» ÇØ¾ßÇÏ´Â Å¬·¡½ºÀÇ °æ¿ì ±âº»Å¬·¡½º¿¡¼­ °¡»óÇÔ¼öÀÇ ³»¿ëÀ» Á¤ÀÇÇÒ ÇÊ¿ä°¡ ¾ø´Ù
-   ÀÌ·¯ÇÑ °æ¿ì¿¡ ¼ø¼ö °¡»óÇÔ¼ö¸¦ »ç¿ëÇÑ´Ù
- - ¼ø¼ö °¡»ó ÇÔ¼ö¸¦ Æ÷ÇÔÇÏ´Â Å¬·¡½º´Â °´Ã¼ »ı¼ºÀÌ ºÒ°¡´É
- - ½ÇÃ¼°¡ ¾ø±â ¶§¹®¿¡ Ãß»óÅ¬·¡½º¶ó°íµµ ÇÑ´Ù
-*/
 class Remote {
 public:
 	virtual void powerOff() = 0;
@@ -26,19 +15,19 @@ protected:
 class Tv : public Remote {
 public:
 	virtual void powerOff() {
-		cout << "Àü¿ø : " << off<<endl;
+		cout << "ì „ì› : " << off<<endl;
 	}
 	virtual void powerOn() {
-		cout << "Àü¿ø : " <<on<< endl;
+		cout << "ì „ì› : " <<on<< endl;
 	}
 };
 class IPtv : public Remote {
 public:
 	virtual void powerOff() {
-		cout << "IP TV Àü¿ø : " <<off << endl;
+		cout << "IP TV ì „ì› : " <<off << endl;
 	}
 	virtual void powerOn() {
-		cout << "IP TV Àü¿ø : " << on<< endl;
+		cout << "IP TV ì „ì› : " << on<< endl;
 	}
 };
 class Device {
@@ -54,7 +43,7 @@ public:
 				remote->powerOff();
 		}
 		else {
-			cout << "- ÀåÄ¡¸¦ ¼±ÅÃÇÏ¼¼¿ä -" << endl;
+			cout << "- ì¥ì¹˜ë¥¼ ì„ íƒí•˜ì„¸ìš” -" << endl;
 		}
 	}
 	void devicePower() {
